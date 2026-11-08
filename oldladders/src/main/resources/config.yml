@@ -1,0 +1,26 @@
+# BedWars1058-OldLadderFix
+# Edit this file, then run /ladderfix reload in-game or from the console. No restart needed.
+# Any option you delete falls back to the default that ships inside the jar.
+
+messages:
+  prefix: "&8[&bOldLadderFix&8] &7"
+  reload-success: "&aConfiguration reloaded."
+  reload-failed: "&cReload failed, check the console. The previous settings are still active."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&7Usage: &f/%label% reload"
+
+# Clients older than 1.13 glitch while climbing ladders (the server's ladder is thicker than in 1.8).
+enabled: true
+# AUTO              = thin ladders only while a client older than old-client-protocol is online (needs ViaVersion or
+#                     ProtocolSupport on THIS server). If neither is installed (e.g. Via runs on the proxy) it is
+#                     always active.
+# ALWAYS            = always thin ladders.
+# OLD_CLIENTS_ONLY  = only while an old client is online, never if the client version can't be detected.
+# When no old client is online the vanilla ladder is used, so 1.13+ clients are never affected.
+mode: AUTO
+# Clients with a protocol number below this count as old. 393 = 1.13 (47 = 1.8, 107 = 1.9, 340 = 1.12.2).
+old-client-protocol: 393
+# Thickness of the ladder in blocks while the fix is active. 0.125 = 2/16 = the 1.8 thickness (vanilla: 0.1875).
+thickness: 0.125
+
+debug: false

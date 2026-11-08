@@ -6,6 +6,7 @@ api-version: '1.13'
 author: LittleBotEngineer
 description: Small gameplay fixes for BedWars1058.
 depend: [BedWars1058]
+softdepend: [ViaVersion, ProtocolSupport]
 
 commands:
   bwfixes:

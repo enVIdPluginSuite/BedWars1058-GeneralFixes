@@ -189,4 +189,19 @@ fixes:
     # How far from the configured shop spot a villager still counts as that shop's villager (blocks).
     search-radius: 1.5
 
+  # 6) Clients older than 1.13 glitch while climbing ladders (server ladder is thicker than in 1.8).
+  old-ladders:
+    enabled: true
+    # AUTO              = thin ladders only while a client older than old-client-protocol is online (needs ViaVersion or
+    #                     ProtocolSupport on THIS server). If neither is installed (e.g. Via runs on the proxy) it is
+    #                     always active.
+    # ALWAYS            = always thin ladders.
+    # OLD_CLIENTS_ONLY  = only while an old client is online, never if the client version can't be detected.
+    # When no old client is online the vanilla ladder is used, so 1.13+ clients are never affected.
+    mode: AUTO
+    # Clients with a protocol number below this count as old. 393 = 1.13 (47 = 1.8, 107 = 1.9, 340 = 1.12.2).
+    old-client-protocol: 393
+    # Thickness of the ladder in blocks while the fix is active. 0.125 = 2/16 = the 1.8 thickness (vanilla: 0.1875).
+    thickness: 0.125
+
 debug: false

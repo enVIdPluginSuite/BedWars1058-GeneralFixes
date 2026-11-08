@@ -61,6 +61,13 @@ abstract class FixPlugin : JavaPlugin() {
 
     override fun onDisable() {
         server.scheduler.cancelTasks(this)
+        for (fix in fixes) {
+            try {
+                fix.onStop()
+            } catch (t: Throwable) {
+                logger.warning("Error while stopping ${fix.javaClass.simpleName}: ${t.message}")
+            }
+        }
     }
 
     /** Re-reads config.yml and re-applies everything. @return false if loading failed (old settings stay active). */

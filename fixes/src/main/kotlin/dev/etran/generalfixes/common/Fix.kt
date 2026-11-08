@@ -21,4 +21,6 @@ abstract class Fix(protected val plugin: FixPlugin, section: String) : Listener 
      */
     open fun onStarted() {}
 
+    /** Runs when the plugin is disabled. For fixes that changed server state and must undo it. */
+    open fun onStop() {}
 }

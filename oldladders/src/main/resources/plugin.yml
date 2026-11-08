@@ -1,0 +1,19 @@
+name: BedWars1058-OldLadderFix
+version: '${version}'
+main: dev.etran.generalfixes.standalone.OldLadderFixPlugin
+# api-version 1.13 is ignored by 1.8 - 1.12 and is the lowest value newer servers accept without legacy conversion.
+api-version: '1.13'
+author: LittleBotEngineer
+description: Fixes ladder climbing glitches for pre-1.13 clients on newer servers.
+depend: [BedWars1058]
+softdepend: [ViaVersion, ProtocolSupport]
+
+commands:
+  ladderfix:
+    description: Manage BedWars1058-OldLadderFix
+    usage: /<command> [reload]
+
+permissions:
+  bwfixes.oldladders.admin:
+    description: Allows /ladderfix reload
+    default: op

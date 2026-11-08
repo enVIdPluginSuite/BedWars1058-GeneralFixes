@@ -8,13 +8,13 @@ plugins {
 }
 
 /** Every fix that exists. A plugin module lists the ones it ships in its gradle.properties (`fixes=a,b`). */
-val allFixes = listOf("cobwebs", "chests", "swords", "tower", "shopnpcs")
+val allFixes = listOf("cobwebs", "chests", "swords", "tower", "shopnpcs", "oldladders")
 // The BedWars1058 API is never fetched from a remote repository, it always comes from this local jar.
 val bedWarsApiJar = layout.projectDirectory.file("libs/bedwars-api-24.9.jar").asFile
 
 allprojects {
     group = "dev.etran"
-    version = "1.2.0"
+    version = "1.3.0"
 
     repositories {
         mavenCentral()
