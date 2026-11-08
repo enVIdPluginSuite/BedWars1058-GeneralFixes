@@ -1,0 +1,18 @@
+name: BedWars1058-SwordReplacementFix
+version: '${version}'
+main: dev.etran.generalfixes.standalone.SwordFixPlugin
+# api-version 1.13 is ignored by 1.8 - 1.12 and is the lowest value newer servers accept without legacy conversion.
+api-version: '1.13'
+author: LittleBotEngineer
+description: Makes bought swords replace the old sword in BedWars1058.
+depend: [BedWars1058]
+
+commands:
+  swordfix:
+    description: Manage BedWars1058-SwordReplacementFix
+    usage: /<command> [reload]
+
+permissions:
+  bwfixes.swords.admin:
+    description: Allows /swordfix reload
+    default: op

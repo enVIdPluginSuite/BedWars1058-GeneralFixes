@@ -1,0 +1,20 @@
+# BedWars1058-NoDeathCobwebs
+# Edit this file, then run /cobwebfix reload in-game or from the console. No restart needed.
+# Any option you delete falls back to the default that ships inside the jar.
+
+messages:
+  prefix: "&8[&bNoDeathCobwebs&8] &7"
+  reload-success: "&aConfiguration reloaded."
+  reload-failed: "&cReload failed, check the console. The previous settings are still active."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&7Usage: &f/%label% reload"
+
+# BedWars1058's Halloween special drops a cobweb on every kill. This removes it again.
+enabled: true
+# Only remove webs that the Halloween special placed (they carry a marker). Webs placed by
+# players are never touched. Turn off to remove ANY web found at the death spot.
+only-special-webs: true
+# Also look again after these many ticks, in case something moved the victim during the kill.
+recheck-delay-ticks: 1
+
+debug: false

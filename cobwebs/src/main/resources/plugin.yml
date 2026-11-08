@@ -1,0 +1,18 @@
+name: BedWars1058-NoDeathCobwebs
+version: '${version}'
+main: dev.etran.generalfixes.standalone.CobwebFixPlugin
+# api-version 1.13 is ignored by 1.8 - 1.12 and is the lowest value newer servers accept without legacy conversion.
+api-version: '1.13'
+author: LittleBotEngineer
+description: Removes the cobweb BedWars1058 places when a player dies.
+depend: [BedWars1058]
+
+commands:
+  cobwebfix:
+    description: Manage BedWars1058-NoDeathCobwebs
+    usage: /<command> [reload]
+
+permissions:
+  bwfixes.cobwebs.admin:
+    description: Allows /cobwebfix reload
+    default: op

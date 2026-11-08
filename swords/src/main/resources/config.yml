@@ -1,0 +1,33 @@
+# BedWars1058-SwordReplacementFix
+# Edit this file, then run /swordfix reload in-game or from the console. No restart needed.
+# Any option you delete falls back to the default that ships inside the jar.
+
+messages:
+  prefix: "&8[&bSwordReplacementFix&8] &7"
+  reload-success: "&aConfiguration reloaded."
+  reload-failed: "&cReload failed, check the console. The previous settings are still active."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&7Usage: &f/%label% reload"
+
+# Bought swords that do not replace the old sword.
+enabled: true
+# Ticks to wait after the purchase before cleaning up (must be at least 1).
+delay-ticks: 1
+# Remove swords of a lower tier than the best sword the player has.
+remove-lower-tier: true
+# Also remove extra swords of the SAME tier (keeps the one with most enchantments).
+remove-same-tier-duplicates: false
+# Put the new sword into the slot of the sword it replaced.
+keep-slot: true
+# Tiers from weakest to strongest. Each entry lists the material prefixes of that tier
+# (older versions say WOOD/GOLD, newer ones WOODEN/GOLDEN). Unknown swords are never removed.
+tiers:
+  - [WOOD, WOODEN]
+  - [GOLD, GOLDEN]
+  - [STONE]
+  - [COPPER]
+  - [IRON]
+  - [DIAMOND]
+  - [NETHERITE]
+
+debug: false

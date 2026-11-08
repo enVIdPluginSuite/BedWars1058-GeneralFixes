@@ -1,0 +1,127 @@
+# BedWars1058-PopUpTowerLanguageFix
+# Edit this file, then run /towerfix reload in-game or from the console. No restart needed.
+# Any option you delete falls back to the default that ships inside the jar.
+
+messages:
+  prefix: "&8[&bPopUpTowerLanguageFix&8] &7"
+  reload-success: "&aConfiguration reloaded."
+  reload-failed: "&cReload failed, check the console. The previous settings are still active."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&7Usage: &f/%label% reload"
+
+# The pop-up tower shop item has no language entry (it shows "Name not set").
+#    BedWars1058 registers the text under the wrong key, so the correct one is added to every
+#    language file.
+enabled: true
+# Shop category and content key of the tower in shop.yml.
+category: utility-category
+content: tower
+# Replace entries that only contain the generic "Name not set" / "Lore not set" placeholders.
+replace-placeholders: true
+placeholders: ["name not set", "lore not set"]
+# Text per language ISO code (lower case). "default" is used when a language has no entry.
+# {color}, {cost}, {currency}, {quick_buy} and {buy_status} are filled in by BedWars1058.
+# Existing, real translations in a language file are never overwritten.
+translations:
+  default:
+    name: "{color}Compact Pop-up Tower"
+    lore:
+      - "&7Cost: {cost} {currency}"
+      - ""
+      - "&7Place a compact pop-up"
+      - "&7tower defense!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  it:
+    name: "{color}Torre Pop-up Compatta"
+    lore:
+      - "&7Costo: {cost} {currency}"
+      - ""
+      - "&7Piazza una Torre Pop-up"
+      - "&7compatta per difenderti!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  es:
+    name: "{color}Torre Emergente Compacta"
+    lore:
+      - "&7Costo: {cost} {currency}"
+      - ""
+      - "&7¡Coloca una torre emergente"
+      - "&7compacta para defenderte!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  pt:
+    name: "{color}Torre Pop-up Compacta"
+    lore:
+      - "&7Custo: {cost} {currency}"
+      - ""
+      - "&7Coloque uma torre pop-up"
+      - "&7compacta para se defender!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  ro:
+    name: "{color}Turn Pop-up Compact"
+    lore:
+      - "&7Cost: {cost} {currency}"
+      - ""
+      - "&7Plasează un turn pop-up"
+      - "&7compact pentru apărare!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  de:
+    name: "{color}Kompakter Pop-up-Turm"
+    lore:
+      - "&7Kosten: {cost} {currency}"
+      - ""
+      - "&7Platziere einen kompakten"
+      - "&7Pop-up-Turm zur Verteidigung!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  fr:
+    name: "{color}Tour Pop-up Compacte"
+    lore:
+      - "&7Coût : {cost} {currency}"
+      - ""
+      - "&7Place une tour pop-up"
+      - "&7compacte pour te défendre !"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  pl:
+    name: "{color}Kompaktowa Wieża Pop-up"
+    lore:
+      - "&7Koszt: {cost} {currency}"
+      - ""
+      - "&7Postaw kompaktową wieżę"
+      - "&7pop-up do obrony!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  ru:
+    name: "{color}Компактная всплывающая башня"
+    lore:
+      - "&7Цена: {cost} {currency}"
+      - ""
+      - "&7Поставьте компактную"
+      - "&7башню для защиты!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+  tr:
+    name: "{color}Kompakt Pop-up Kule"
+    lore:
+      - "&7Maliyet: {cost} {currency}"
+      - ""
+      - "&7Savunma için kompakt bir"
+      - "&7pop-up kule yerleştir!"
+      - ""
+      - "{quick_buy}"
+      - "{buy_status}"
+
+debug: false

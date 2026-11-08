@@ -1,0 +1,18 @@
+name: BedWars1058-PopUpTowerLanguageFix
+version: '${version}'
+main: dev.etran.generalfixes.standalone.TowerFixPlugin
+# api-version 1.13 is ignored by 1.8 - 1.12 and is the lowest value newer servers accept without legacy conversion.
+api-version: '1.13'
+author: LittleBotEngineer
+description: Adds the missing BedWars1058 pop-up tower language entries.
+depend: [BedWars1058]
+
+commands:
+  towerfix:
+    description: Manage BedWars1058-PopUpTowerLanguageFix
+    usage: /<command> [reload]
+
+permissions:
+  bwfixes.tower.admin:
+    description: Allows /towerfix reload
+    default: op

@@ -1,0 +1,28 @@
+# BedWars1058-ChestVisibilityFix
+# Edit this file, then run /chestfix reload in-game or from the console. No restart needed.
+# Any option you delete falls back to the default that ships inside the jar.
+
+messages:
+  prefix: "&8[&bChestVisibilityFix&8] &7"
+  reload-success: "&aConfiguration reloaded."
+  reload-failed: "&cReload failed, check the console. The previous settings are still active."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&7Usage: &f/%label% reload"
+
+# Chests that stay invisible for some players/teams until something updates the block.
+#    The fix re-sends the chest blocks to the players after the game starts.
+enabled: true
+# Re-send for every player of an arena when the game goes to "playing".
+on-game-start: true
+# Re-send for a single player when they get their first team spawn.
+on-first-spawn: true
+# Re-send for a player each time they respawn after dying (usually not needed).
+on-respawn: false
+# Several passes catch players whose teleport/chunk loading finishes late (20 ticks = 1 second).
+delays-ticks: [2, 20, 60]
+# Chunks around the player that are scanned for chests.
+chunk-radius: 8
+# Block names to re-send. Names missing on an older server version are simply ignored.
+block-types: [CHEST, TRAPPED_CHEST, ENDER_CHEST]
+
+debug: false
