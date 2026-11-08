@@ -1,0 +1,26 @@
+# BedWars1058-WinFix
+# Edit this file, then run /winfix reload in-game or from the console. No restart needed.
+# Any option you delete falls back to the default that ships inside the jar.
+
+messages:
+  prefix: "&8[&bWinFix&8] &7"
+  reload-success: "&aConfiguration reloaded."
+  reload-failed: "&cReload failed, check the console. The previous settings are still active."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&7Usage: &f/%label% reload"
+
+# Fills in the end-of-game sidebar ({winnerTeamName}, {topPlayerDisplayName}, {topValue} ... shown as raw text).
+enabled: true
+# Statistic used to rank the "Top" rows. Leave empty to use the statistic BedWars1058 uses for its own
+# end-game sidebar (general.game-end.sb-top.order-by, "kills" by default).
+order-by: ""
+# Hide "Top" rows for players that have 0 of the ranked statistic.
+hide-zero-values: false
+# When the match had MORE players than the language file has "Top" rows, repeat the last row
+# so everybody can be listed, as long as the sidebar has room (a sidebar holds at most 15 lines).
+expand-rows: true
+max-sidebar-lines: 15
+# Ticks after the game ends before the sidebar is rebuilt. Raise it if you still see raw placeholders.
+refresh-delay-ticks: 10
+
+debug: false

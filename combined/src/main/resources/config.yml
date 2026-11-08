@@ -204,4 +204,18 @@ fixes:
     # Thickness of the ladder in blocks while the fix is active. 0.125 = 2/16 = the 1.8 thickness (vanilla: 0.1875).
     thickness: 0.125
 
+  # 7) The end-of-game sidebar shows raw {winnerTeamName} / {topPlayerDisplayName} / {topValue} text.
+  #    After a game ends the sidebar is rebuilt with the real winner and the real "top" list.
+  end-game-sidebar:
+    enabled: true
+    # Statistic used to rank the "Top" rows. Empty = the statistic BedWars1058 uses itself (usually "kills").
+    order-by: ""
+    # Hide "Top" rows for players that have 0 of the ranked statistic.
+    hide-zero-values: false
+    # More players than "Top" rows in the language file: repeat the last row while the sidebar has room.
+    expand-rows: true
+    max-sidebar-lines: 15
+    # Ticks after the game ends before the sidebar is rebuilt. Raise it if you still see raw placeholders.
+    refresh-delay-ticks: 10
+
 debug: false

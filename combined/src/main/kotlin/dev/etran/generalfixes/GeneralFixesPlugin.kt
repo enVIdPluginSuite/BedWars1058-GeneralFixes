@@ -8,8 +8,9 @@ import dev.etran.generalfixes.oldladders.OldLadderFix
 import dev.etran.generalfixes.shopnpcs.ShopNpcFix
 import dev.etran.generalfixes.swords.SwordReplacementFix
 import dev.etran.generalfixes.tower.PopUpTowerLanguageFix
+import dev.etran.generalfixes.winfix.WinFix
 
-/** All six fixes in one jar. Each one is switched on/off in config.yml under `fixes.<name>.enabled`. */
+/** All seven fixes in one jar. Each one is switched on/off in config.yml under `fixes.<name>.enabled`. */
 class GeneralFixesPlugin : FixPlugin() {
     override val adminPermission = "bwfixes.admin"
 
@@ -19,6 +20,7 @@ class GeneralFixesPlugin : FixPlugin() {
         SwordReplacementFix(this, "fixes.sword-replacement"),
         PopUpTowerLanguageFix(this, "fixes.pop-up-tower-language"),
         ShopNpcFix(this, "fixes.shop-npcs"),
-        OldLadderFix(this, "fixes.old-ladders")
+        OldLadderFix(this, "fixes.old-ladders"),
+        WinFix(this, "fixes.end-game-sidebar")
     )
 }
