@@ -175,4 +175,18 @@ fixes:
           - "{quick_buy}"
           - "{buy_status}"
 
+  # 5) Shop / team-upgrade villagers that can be punched to death and then never come back.
+  shop-npcs:
+    enabled: true
+    # Cancel every kind of damage to the shop villagers (punches, arrows, TNT, void, ...).
+    protect-from-damage: true
+    # Respawn a shop villager that died or vanished during the game, at its original spot.
+    respawn: true
+    # Wait this long after a villager died before respawning it (20 ticks = 1 second).
+    respawn-delay-ticks: 20
+    # Also look for missing villagers every N ticks (catches removal by other plugins/commands). 0 = only on death.
+    check-interval-ticks: 100
+    # How far from the configured shop spot a villager still counts as that shop's villager (blocks).
+    search-radius: 1.5
+
 debug: false

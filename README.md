@@ -1,6 +1,6 @@
-# BedWars1058-GeneralFixes 1.1.0
+# BedWars1058-GeneralFixes 1.2.0
 
-Splits the build: besides the combined plugin, every fix is now also built as its own plugin jar so admins can install only the fixes they want.
+Adds the shop villager fix: shop and team-upgrade villagers can no longer be punched to death, and are respawned if they disappear.
 
 Small gameplay fixes for [BedWars1058](https://github.com/andrei1058/BedWars1058). Minecraft 1.8 - 26.3.
 
@@ -12,7 +12,8 @@ Every fix is available as its own plugin jar, and all of them together as one ja
 | `BedWars1058-ChestVisibilityFix` | Re-sends chests so they are not invisible at game start | `/chestfix reload` | `bwfixes.chests.admin` |
 | `BedWars1058-SwordReplacementFix` | Bought swords remove the weaker old swords | `/swordfix reload` | `bwfixes.swords.admin` |
 | `BedWars1058-PopUpTowerLanguageFix` | Writes the missing pop-up tower name/lore into every language file | `/towerfix reload` | `bwfixes.tower.admin` |
-| `BedWars1058-GeneralFixes` | All 4 above in one plugin, each toggled with `fixes.<name>.enabled` | `/bwfixes reload` | `bwfixes.admin` |
+| `BedWars1058-ShopNpcFix` | Shop villagers can no longer be damaged, and are respawned if they ever disappear | `/shopnpcfix reload` | `bwfixes.shopnpcs.admin` |
+| `BedWars1058-GeneralFixes` | All 5 above in one plugin, each toggled with `fixes.<name>.enabled` | `/bwfixes reload` | `bwfixes.admin` |
 
 Use either the combined jar **or** the individual jars, not both (they would do the same work twice).
 

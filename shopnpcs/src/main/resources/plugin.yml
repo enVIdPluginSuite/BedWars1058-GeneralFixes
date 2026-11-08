@@ -1,0 +1,18 @@
+name: BedWars1058-ShopNpcFix
+version: '${version}'
+main: dev.etran.generalfixes.standalone.ShopNpcFixPlugin
+# api-version 1.13 is ignored by 1.8 - 1.12 and is the lowest value newer servers accept without legacy conversion.
+api-version: '1.13'
+author: LittleBotEngineer
+description: Protects BedWars1058 shop villagers from damage and respawns them if they disappear.
+depend: [BedWars1058]
+
+commands:
+  shopnpcfix:
+    description: Manage BedWars1058-ShopNpcFix
+    usage: /<command> [reload]
+
+permissions:
+  bwfixes.shopnpcs.admin:
+    description: Allows /shopnpcfix reload
+    default: op

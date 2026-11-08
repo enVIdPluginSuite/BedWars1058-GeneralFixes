@@ -1,0 +1,25 @@
+# BedWars1058-ShopNpcFix
+# Edit this file, then run /shopnpcfix reload in-game or from the console. No restart needed.
+# Any option you delete falls back to the default that ships inside the jar.
+
+messages:
+  prefix: "&8[&bShopNpcFix&8] &7"
+  reload-success: "&aConfiguration reloaded."
+  reload-failed: "&cReload failed, check the console. The previous settings are still active."
+  no-permission: "&cYou do not have permission to do that."
+  usage: "&7Usage: &f/%label% reload"
+
+# Shop / team-upgrade villagers that can be punched to death and then never come back.
+enabled: true
+# Cancel every kind of damage to the shop villagers (punches, arrows, TNT, void, ...).
+protect-from-damage: true
+# Respawn a shop villager that died or vanished during the game, at its original spot.
+respawn: true
+# Wait this long after a villager died before respawning it (20 ticks = 1 second).
+respawn-delay-ticks: 20
+# Also look for missing villagers every N ticks (catches removal by other plugins/commands). 0 = only on death.
+check-interval-ticks: 100
+# How far from the configured shop spot a villager still counts as that shop's villager (blocks).
+search-radius: 1.5
+
+debug: false
